@@ -1,0 +1,26 @@
+//Validación de formularios <br>
+//Como ya hemos comentado la seguridad en el envío formularios es crucial para enviar ataques.<br>
+
+//Con HTML5 podemos hacer validaciones básicas en el lado del cliente (navegador) gracias a nuevos atributos:<br>
+<br><br>
+//require: hace que un campo sea obligatorio.
+<input type="text" name="nombre" required> <br>
+//pattern: define una expresión regular para validar el formato de un campo.
+<input type="text" name="codigo-postal" pattern="[0-9]{5}" title="Ingrese un código postal válido de 5 dígitos"><br>
+//number: valida que sean números.
+<input type="number" name="edad" ><br>
+//min y max: especifica el valor mínimo y máximo para campos numéricos.
+<input type="number" name="edad" min="18" max="99"><br>
+//email: valida que el campo sea un correo electrónico válido.
+<input type="email" name="correo" required><br>
+//maxlength: limita la cantidad máxima de caracteres.
+<input type="text" name="usuario" maxlength="20"><br>
+//minlength: liminta la cantidad mínima de caracteres.
+<input type="password" name="contrasena" minlength="6"><br>
+//tel: para campos telefónicos.
+<input type="tel" name="telefono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="Ingrese un número de teléfono válido"><br>
+//url: para campos que tengan que ser una url.
+<input type="url" name="sitio-web" required><br>
+//date: para campos que tengan fechas.
+<input type="date" name="fecha-nacimiento" max="2005-01-01"><br>
+//NOTA.- Recuerda que la validación en el lado del cliente no es suficiente para garantizar la seguridad de tus datos, siempre se deben realizar validaciones adicionales en el lado del servidor.
